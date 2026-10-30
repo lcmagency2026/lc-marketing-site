@@ -1,0 +1,88 @@
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#090B09;color:#F5F5F3;font-family:'DM Sans',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%}
+a{color:#F5F5F3}a:hover{color:#FFFFFF}
+a:focus-visible,button:focus-visible{outline:2px solid #DADDE2;outline-offset:3px}
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:200;background:#F5F5F3;color:#0D0E09;padding:10px 16px;border-radius:4px}
+.skip-link:focus{left:8px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Chrome */
+.chrome-text,.chrome-fill{background-image:linear-gradient(120deg,#8F959E 0%,#DDE1E6 9%,#FFFFFF 15%,#B7BCC4 25%,#878D96 35%,#D3D7DC 45%,#FFFFFF 51%,#A6ACB4 61%,#7F858E 71%,#CED2D8 83%,#FFFFFF 89%,#8F959E 100%);background-size:300% 300%;background-repeat:repeat;background-position:calc(var(--chrome,0) * 4%) 50%;transition:background-position .2s linear}
+.chrome-text{-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 16px rgba(200,212,228,.22))}
+.chrome-fill{background-image:linear-gradient(120deg,#BFC4CB 0%,#E8EBEE 9%,#FFFFFF 15%,#D2D6DB 25%,#B4B9C0 35%,#E1E4E8 45%,#FFFFFF 51%,#C8CCD2 61%,#B1B6BD 71%,#DDE0E4 83%,#FFFFFF 89%,#BFC4CB 100%);color:#0D0E09;box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(0,0,0,.12),0 0 0 1px rgba(255,255,255,.3),0 10px 40px rgba(200,212,228,.2)}
+a.chrome-fill,a.chrome-fill:hover{color:#0D0E09}
+.chrome-ring{border:1px solid transparent;background:linear-gradient(#111311,#111311) padding-box,linear-gradient(calc(var(--chrome,0) * 3.6deg),#FFFFFF,#9EA2A8,#F2F3F5,#8E9298,#FFFFFF) border-box}
+
+.chrome-text.glow-green{filter:drop-shadow(0 0 6px rgba(57,255,20,.95)) drop-shadow(0 0 18px rgba(57,255,20,.7)) drop-shadow(0 0 36px rgba(57,255,20,.45))}
+
+/* Intro */
+.intro{position:fixed;inset:0;z-index:100;background:#090B09;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.intro-play{animation:introOut 3.9s cubic-bezier(.7,0,.2,1) forwards}
+.intro-skip{animation:introOut .5s ease forwards}
+.intro-phone{animation:phoneIn 3.9s cubic-bezier(.76,0,.24,1) forwards;transform-origin:50% 50%}
+.intro-feed{animation:feedSnap 2.6s cubic-bezier(.65,0,.35,1) .7s forwards}
+.intro-caption{animation:capIn 3.9s ease forwards}
+@keyframes introOut{0%,78%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes phoneIn{0%{opacity:0;transform:translateY(60px) scale(.88)}15%{opacity:1;transform:none}74%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(7)}}
+@keyframes feedSnap{0%,12%{transform:translateY(0)}28%,42%{transform:translateY(-600px)}58%,72%{transform:translateY(-1200px)}88%,100%{transform:translateY(-1800px)}}
+@keyframes capIn{0%,10%{opacity:0;transform:translateY(10px)}22%,66%{opacity:1;transform:none}76%,100%{opacity:0}}
+.no-intro .intro{display:none}
+
+/* Hero entrance */
+.hero-wait .rise{opacity:0}
+.hero-in .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-in .d1{animation-delay:.05s}.hero-in .d2{animation-delay:.15s}.hero-in .d3{animation-delay:.27s}.hero-in .d4{animation-delay:.39s}.hero-in .d5{animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* Loops */
+.loop-feed{animation:feedLoop 20s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes feedLoop{0%,15%{transform:translateY(0)}20%,35%{transform:translateY(-600px)}40%,55%{transform:translateY(-1200px)}60%,75%{transform:translateY(-1800px)}80%,95%{transform:translateY(-2400px)}100%{transform:translateY(-3000px)}}
+.bar{animation:bar 4s linear infinite;transform-origin:left}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.marquee{animation:marq 32s linear infinite}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(-2deg)}}
+@supports (animation-timeline: view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 5% entry 45%}}
+
+/* Hover */
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),background-color .35s ease}
+.lift:hover{transform:translateY(-4px)}
+.svc-bg{transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.lift:hover .svc-bg{transform:scale(1.06);opacity:.75!important;filter:saturate(.8)!important}
+.row:hover .row-name{transform:translateX(12px)}
+.row-name{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+
+/* Footer links */
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.footer-links a,.link-btn{color:#909390;text-decoration:none;font:inherit;font-size:13px;background:none;border:0;padding:0;cursor:pointer}
+.footer-links a:hover,.link-btn:hover{color:#F5F5F3}
+
+/* Legal page */
+.legal{max-width:760px;margin:0 auto;padding:96px 24px 120px}
+.legal h1{font-family:'Manrope',sans-serif;font-weight:700;font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-.03em;margin:0 0 16px}
+.legal h2{font-family:'Manrope',sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;margin:48px 0 12px}
+.legal p,.legal li{color:#C9CBC7}
+.legal ul{padding-left:20px}
+.legal a{color:#F5F5F3}
+
+.show-sm{display:none}
+@media (max-width:640px){
+  .hide-sm{display:none!important}
+  .show-sm{display:inline}
+  .hdr{padding:10px 16px!important}
+  .hdr-logo{height:30px!important}
+  .hdr-cta{padding:10px 14px!important;font-size:13px!important}
+  .reels{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .reels figcaption{padding:40px 12px 12px!important}
+  .reels figcaption .chrome-text{font-size:16px!important}
+}
+@media (prefers-reduced-motion: reduce){
+  .intro{display:none}
+  .loop-feed,.marquee,.float,.bar{animation:none}
+  .hero-wait .rise{opacity:1}
+  .reveal{animation:none}
+  html{scroll-behavior:auto}
+}
