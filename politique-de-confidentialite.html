@@ -2,7 +2,7 @@
 <html lang="fr-CA">
 <head>
 <meta charset="utf-8">
-
+<meta name="lc-ga4" content="G-ZKS5Q83KWN">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Politique de confidentialité | LC Marketing</title>
 <meta name="description" content="Comment LC Marketing recueille, utilise et protège vos renseignements personnels, conformément à la Loi 25 du Québec.">
@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=20261027">
+<link rel="stylesheet" href="/assets/site.css?v=20261030">
 
 </head>
 <body>
@@ -44,7 +44,7 @@
 <main id="contenu" class="legal">
 <p style="margin:0 0 20px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#909390">Loi 25 · Protection des renseignements personnels</p>
 <h1><span class="chrome-text">Politique de confidentialité</span></h1>
-<p>Dernière mise à jour : 27 octobre 2026</p>
+<p>Dernière mise à jour : 30 octobre 2026</p>
 <p>LC Marketing respecte votre vie privée. Cette politique explique quels renseignements personnels nous recueillons sur le site lc-marketing.ca, pourquoi, comment nous les protégeons et quels sont vos droits, conformément à la <em>Loi sur la protection des renseignements personnels dans le secteur privé</em> du Québec, modifiée par la Loi 25.</p>
 
 <h2>1. Responsable de la protection des renseignements personnels</h2>
@@ -68,16 +68,19 @@
 <p>Nous ne vendons jamais vos renseignements personnels.</p>
 
 <h2>4. Témoins (cookies) et consentement</h2>
-<p>À votre première visite, une bannière vous permet d'accepter ou de refuser les témoins non essentiels, par catégorie. Aucun témoin de mesure d'audience ou de publicité n'est activé sans votre consentement. Les témoins strictement nécessaires au fonctionnement du site et à l'enregistrement de vos choix ne requièrent pas de consentement.</p>
+<p>À votre première visite, une bannière vous permet d'<strong>accepter</strong> ou de <strong>refuser</strong> les témoins de mesure d'audience. Les deux choix sont offerts de la même façon, et aucun témoin de mesure d'audience ou de publicité n'est activé tant que vous n'avez pas accepté.</p>
+<ul>
+<li><strong>Témoins de mesure d'audience (avec votre consentement seulement) :</strong> Google Analytics 4 dépose les témoins <code>_ga</code> et <code>_ga_*</code> pour compter les visites et comprendre les pages consultées. Ils sont conservés au plus 13 mois. Les fonctions publicitaires et les « signaux Google » sont désactivées.</li>
+<li><strong>Enregistrement de votre choix (nécessaire) :</strong> votre décision (accepter ou refuser) est conservée dans le stockage local de votre navigateur pendant 12 mois, afin de ne pas vous la redemander à chaque page. Elle ne contient aucun renseignement permettant de vous identifier.</li>
+</ul>
 <p>Vous pouvez modifier ou retirer votre consentement en tout temps avec le lien « Gérer mes témoins » au bas de chaque page, ou en supprimant les témoins dans votre navigateur.</p>
 
 <h2>5. Fournisseurs et communication à l'extérieur du Québec</h2>
 <p>Pour exploiter le site et nos services, nous faisons appel à des fournisseurs qui peuvent traiter vos renseignements à l'extérieur du Québec, notamment aux États-Unis :</p>
 <ul>
-<li>Netlify (Netlify Inc.) : hébergement du site.</li>
+<li>GitHub Pages (GitHub Inc., filiale de Microsoft) : hébergement du site.</li>
 <li>Calendly (Calendly LLC) : prise de rendez-vous en ligne.</li>
-<li>Outils de mesure d'audience (par exemple Google Analytics), seulement si vous y consentez.</li>
-<li>CookieYes : gestion de vos préférences de témoins.</li>
+<li>Google Analytics 4 (Google LLC) : mesure d'audience anonyme du site, seulement si vous acceptez les témoins de mesure d'audience.</li>
 <li>Google Fonts (Google LLC) : affichage des polices de caractères du site.</li>
 <li>Microsoft 365 (Microsoft Corporation) : courriel et calendrier.</li>
 </ul>
@@ -114,10 +117,18 @@
 </div>
 <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding-top:24px;border-top:1px solid #1E201E;font-size:13px;color:#909390">
 <span>© 2026 LC Marketing · Laurentides et région de Montréal</span>
-<div class="footer-links"><a href="/politique-de-confidentialite">Politique de confidentialité</a></div>
+<div class="footer-links"><a href="/politique-de-confidentialite">Politique de confidentialité</a><button type="button" class="link-btn" data-consent-open>Gérer mes témoins</button></div>
 </div>
 </div>
 </footer>
-<script src="/assets/site.js?v=20261027" defer></script>
+<div id="consent" class="consent" role="region" aria-label="Témoins (cookies)" hidden>
+<p class="consent-title">Votre vie privée</p>
+<p class="consent-text">Nous aimerions utiliser des témoins de mesure d'audience (Google Analytics) pour comprendre comment notre site est utilisé et l'améliorer. Ils ne sont activés que si vous acceptez, et vous pouvez changer d'avis en tout temps avec le lien « Gérer mes témoins » au bas de la page. <a href="/politique-de-confidentialite">En savoir plus</a></p>
+<div class="consent-actions">
+<button type="button" class="consent-btn" data-consent="denied">Refuser</button>
+<button type="button" class="consent-btn" data-consent="granted">Accepter</button>
+</div>
+</div>
+<script src="/assets/site.js?v=20261030" defer></script>
 </body>
 </html>

@@ -60,6 +60,17 @@ a.chrome-fill,a.chrome-fill:hover{color:#0D0E09}
 .footer-links a,.link-btn{color:#909390;text-decoration:none;font:inherit;font-size:13px;background:none;border:0;padding:0;cursor:pointer}
 .footer-links a:hover,.link-btn:hover{color:#F5F5F3}
 
+
+/* Bannière de témoins (Loi 25) */
+.consent{position:fixed;left:16px;bottom:16px;z-index:150;max-width:480px;width:calc(100% - 32px);background:#111311;color:#F5F5F3;border:1px solid #2F312F;border-radius:14px;padding:20px 20px 18px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.consent[hidden]{display:none}
+.consent-title{margin:0 0 6px;font-family:'Manrope',sans-serif;font-weight:700;font-size:16px}
+.consent-text{margin:0 0 16px;font-size:14px;line-height:1.5;color:#C9CBC7}
+.consent-text a{color:#F5F5F3}
+.consent-actions{display:flex;gap:10px}
+.consent-btn{flex:1;min-height:46px;border-radius:6px;border:1px solid #DADDE2;background:#F5F5F3;color:#0D0E09;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s ease}
+.consent-btn:hover{background:#FFFFFF}
+
 /* Legal page */
 .legal{max-width:760px;margin:0 auto;padding:96px 24px 120px}
 .legal h1{font-family:'Manrope',sans-serif;font-weight:700;font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-.03em;margin:0 0 16px}
